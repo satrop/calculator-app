@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="">
+    <html lang="en" className="transition-all duration-500 ease-in-out">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased font-spartan grid place-content-center min-h-screen`}
       >
