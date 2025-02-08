@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define CSS variables for each theme */
+:root {
+  /* Dark */
+  --theme1-mainBG: #EAE3DC;
+  --theme1-keyShadow: #B3A497;
+  --theme1-screenBg: #181F33;
+  --theme1-calculatorBg: #242D44;
+  --theme1-keyBg: #EAE3DC;
+  --theme1-ketText: #434A59;
+  --theme1-text: #ffffff;
+  --theme1-delBg: #647198;
+  --theme1-delShadow: #414E73;
+  --theme1-resetBg: #647198;
+  --theme1-resetShadow: #414E73;
+  --theme1-equalsBg: #D03F2F;
+  --theme1-equalsShadow: #93261A;
+
+  /* Light */
+  --theme2-mainBG: #E6E6E6;
+  --theme2-screenBg: #EEEEEE;
+  --theme2-calculatorBg: #D2CDCD;
+  --theme2-keyBg: #E5E4E1;
+  --theme2-ketText: #36362C;
+  --theme2-keyShadow: #E5E4E1;
+  --theme2-text: #36362C;
+  --theme2-delBg: #378187;
+  --theme2-delShadow: #1B6066;
+  --theme2-resetBg: #378187;
+  --theme2-resetShadow: #1B6066;
+  --theme2-equalsBg: #C85402;
+  --theme2-equalsShadow: #873901;
+
+  /* Alt */
+  --theme3-mainBG: #17062A;
+  --theme3-screenBg: #1E0936;
+  --theme3-calculatorBg: #1E0936;
+  --theme3-keyBg: #331C4D;
+  --theme3-ketText: #FFE53D;
+  --theme3-keyShadow: #881C9E;
+  --theme3-text: #FFE53D;
+  --theme3-delBg: #56077C;
+  --theme3-delShadow: #BE15F4;
+  --theme3-resetBg: #56077C;
+  --theme3-resetShadow: #BE15F4;
+  --theme3-equalsBg: #00DED0;
+  --theme3-equalsShadow: #6CF9F1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme1-mainBG: #3A4663;
+  }
+}
+
+.buttons {
+  .button {
+    &.reset-button,
+    &.del-button {
+      font-size: 1.75rem;
+    }
+
+    &:hover {
+      filter: brightness(110%);
+    }
+
+    &:active {
+      transform: translateY(4px);
+    }
+  }
+}
+
+html {
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+
+  &.theme-dark {
+    background-color: var(--theme1-mainBG);
+
+    .text-color {
+      color: var(--theme1-text);
+    }
+
+    .calculator {
+      .display {
+        background-color: var(--theme1-screenBg);
+      }
+    }
+
+    .buttons {
+      background-color: var(--theme1-calculatorBg);
+
+      .button {
+        background-color: var(--theme1-keyBg);
+        box-shadow: 0 4px var(--theme1-keyShadow);
+
+        &:active {
+          box-shadow: 0 0 var(--theme1-keyShadow);
+        }
+
+        &:not(.del-button, .reset-button, .equals-button) {
+          color: var(--theme1-ketText);
+        }
+
+        &:is(.del-button, .reset-button, .equals-button) {
+          color: #fff;
+        }
+
+        &.del-button,
+        &.reset-button {
+          background-color: var(--theme1-delBg);
+          box-shadow: 0 4px var(--theme1-delShadow);
+
+          &:active {
+            box-shadow: 0 0 var(--theme1-keyShadow);
+          }
+        }
+
+        &.reset-button {
+          grid-column: span 2;
+        }
+
+        &.equals-button {
+          background-color: var(--theme1-equalsBg);
+          box-shadow: 0 4px var(--theme1-equalsShadow);
+          grid-column: span 2;
+
+          &:active {
+            box-shadow: 0 0 var(--theme1-keyShadow);
+          }
+        }
+      }
+    }
+  }
+
+  &.theme-light {
+    background-color: var(--theme2-mainBG);
+
+    .text-color {
+      color: var(--theme2-text);
+    }
+
+    .calculator {
+      .display {
+        background-color: var(--theme2-screenBg);
+      }
+    }
+
+    .buttons {
+      background-color: var(--theme2-calculatorBg);
+
+      .button {
+        background-color: var(--theme1-keyBg);
+        box-shadow: 0 4px var(--theme1-keyShadow);
+
+        &:active {
+          box-shadow: 0 0 var(--theme1-keyShadow);
+        }
+
+        &:not(.del-button, .reset-button, .equals-button) {
+          color: var(--theme1-ketText);
+        }
+
+        &:is(.del-button, .reset-button, .equals-button) {
+          color: #fff;
+        }
+
+        &.del-button,
+        &.reset-button {
+          background-color: var(--theme2-delBg);
+          box-shadow: 0 4px var(--theme2-delShadow);
+
+          &:active {
+            box-shadow: 0 0 var(--theme1-keyShadow);
+          }
+        }
+
+        &.reset-button,
+        &.equals-button {
+          grid-column: span 2;
+        }
+
+        &.equals-button {
+          background-color: var(--theme2-equalsBg);
+          box-shadow: 0 4px var(--theme2-equalsShadow);
+
+          &:active {
+            box-shadow: 0 0 var(--theme1-keyShadow);
+          }
+        }
+      }
+    }
+  }
+
+  &.theme-alt {
+    background-color: var(--theme3-mainBG);
+
+    .text-color {
+      color: var(--theme3-text);
+    }
+
+    .calculator {
+      .display {
+        background-color: var(--theme3-screenBg);
+      }
+    }
+
+    .buttons {
+      background-color: var(--theme3-calculatorBg);
+
+      .button {
+        background-color: var(--theme3-keyBg);
+        box-shadow: 0 4px var(--theme3-keyShadow);
+
+        &:active {
+          box-shadow: 0 0 var(--theme1-keyShadow);
+        }
+
+        &:not(.del-button, .reset-button, .equals-button) {
+          color: var(--theme3-ketText);
+        }
+
+        &:is(.del-button, .reset-button) {
+          color: #fff;
+        }
+
+        &.equals-button {
+          color: #1A2327;
+        }
+
+        &.del-button,
+        &.reset-button {
+          background-color: var(--theme3-delBg);
+          box-shadow: 0 4px var(--theme3-delShadow);
+
+          &:active {
+            box-shadow: 0 0 var(--theme1-keyShadow);
+          }
+        }
+
+        &.reset-button,
+        &.equals-button {
+          grid-column: span 2;
+        }
+
+        &.equals-button {
+          background-color: var(--theme3-equalsBg);
+          box-shadow: 0 4px var(--theme3-equalsShadow);
+
+          &:active {
+            box-shadow: 0 0 var(--theme1-keyShadow);
+          }
+        }
+      }
+    }
+  }
+}
