@@ -1,10 +1,8 @@
 "use client";
 
-import { useTheme } from "../context/ThemeContext";
 import { useState, useEffect } from "react";
 
 const Calculator = () => {
-  const { theme } = useTheme();
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
 
