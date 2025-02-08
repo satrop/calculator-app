@@ -1,4 +1,4 @@
-# [Frontend Mentor - Easybank landing](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN)
+# [Frontend Mentor - Easybank landing](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29)
 
 ## Overview
 
