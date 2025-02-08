@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# [Frontend Mentor - Easybank landing](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN)
 
-## Getting Started
+## Overview
 
-First, run the development server:
+-   [Live Site](https://calculator-app-six-pi.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![](img.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## My process
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Built with ❤️
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+-   Next.js
+-   Tailwind
+-   Mobile-first workflow
+-   Varcel
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+### 📝 Brief
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Your challenge is to build out this calculator app and get it looking as close to the design as possible.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-## Deploy on Vercel
+Your users should be able to:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- See the size of the elements adjust based on their device's screen size ✅
+- Perform mathematical operations like addition, subtraction, multiplication, and division ✅
+- Adjust the color theme based on their preference ✅
+- Bonus: Have their initial theme preference checked using prefers-color-scheme and have any additional changes saved in the browser ✅
