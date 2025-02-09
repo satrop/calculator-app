@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import Calculator from "../components/Calculator";
+import ThemeToggle from "../components/ThemeToggle";
 
 export default function Home() {
   useEffect(() => {
@@ -13,7 +14,10 @@ export default function Home() {
 
   return (
     <main>
-      <Calculator />
+      <div className="grid place-content-center p-4 lg:p-0">
+        <ThemeToggle />
+        <Calculator />
+      </div>
     </main>
   );
 }

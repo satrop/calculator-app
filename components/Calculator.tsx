@@ -59,14 +59,15 @@ const Calculator = () => {
       <div className="buttons transition duration-300 rounded-xl grid grid-cols-4 gap-6 py-8 px-[30px]">
         {["7", "8", "9", "DEL", "4", "5", "6", "+", "1", "2", "3", "-", ".", "0", "/", "x", "RESET", "="].map((btn) => (
           <button
-            className={`button lg:min-w-[100px] grid place-content-center leading-6 h-16 rounded-[10px] text-[40px] font-bold transition duration-300 ${
+            className={`button aspect-square leading-none px-7 lg:min-w-[100px] grid place-content-center rounded-[10px] text-3xl sm:text-[40px] font-bold transition duration-300 ${
               btn === "DEL" ? "del-button" : btn === "RESET" ? "reset-button" : btn === "=" ? "equals-button" : ""
             }`}
             key={btn}
-            onClick={() => handleButtonClick(btn)}>
-              <div className="mt-1">
+            onClick={() => handleButtonClick(btn)}
+            aria-label={btn === "DEL" ? "Delete" : btn === "RESET" ? "Reset" : btn === "=" ? "Equals" : btn}>
+              <span className="mt-1">
                 {btn}
-              </div>
+              </span>
           </button>
         ))}
       </div>

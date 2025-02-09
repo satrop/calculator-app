@@ -58,6 +58,7 @@
   }
 }
 
+// Base style for the buttons
 .buttons {
   .button {
     &.reset-button,
@@ -72,9 +73,16 @@
     &:active {
       transform: translateY(4px);
     }
+
+    &.reset-button,
+    &.equals-button {
+      aspect-ratio: unset;
+      padding-block: .75rem;
+    }
   }
 }
 
+// Theming based on the class of the html element
 html {
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 
